@@ -12,3 +12,4 @@ python-multipart
 joblib
 scikit-learn
 xgboost
+email-validator
