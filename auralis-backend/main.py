@@ -62,9 +62,10 @@ import certifi
 # Configuration
 DATA_PATH = os.path.join("..", "Patient Vital Signs and Event Tracking", "dummy_obs.csv")
 MONGO_URI = os.getenv("MONGO_URI", "mongodb://localhost:27017/auralis_db")
-
+print("MONGO_URI =", MONGO_URI)
+print("TLS =", MONGO_URI.startswith("mongodb+srv://"))
 # Database Init
-client = motor.motor_asyncio.AsyncIOMotorClient(MONGO_URI, tlsCAFile=certifi.where())
+client = motor.motor_asyncio.AsyncIOMotorClient(MONGO_URI)
 db = client.auralis_db
 SECRET_KEY = os.getenv("SECRET_KEY", "auralis-secure-key-2024")
 
