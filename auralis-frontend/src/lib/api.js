@@ -1,4 +1,6 @@
-const BASE_URL = '/api';
+import { API_URL } from '../config';
+
+const BASE_URL = API_URL;
 
 export const fetchPatients = async () => {
     const response = await fetch(`${BASE_URL}/patients`);

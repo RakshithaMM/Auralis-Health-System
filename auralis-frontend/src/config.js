@@ -1,0 +1,1 @@
+export const API_URL = "https://auralis-backend-0tz8.onrender.com";
